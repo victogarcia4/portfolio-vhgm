@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: 228 18% 7%;
+  --foreground: 220 24% 94%;
+  --surface: 225 18% 10%;
+  --surface-elevated: 224 16% 14%;
+  --border: 224 14% 22%;
+  --muted: 220 11% 66%;
+  --accent: 171 64% 46%;
+  --accent-2: 39 91% 58%;
+  --font-heading: var(--font-display);
+}
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --animate-grid: grid 15s linear infinite;
+
+  @keyframes grid {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(60px);
+    }
+  }
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, hsl(var(--accent) / 0.11), transparent 30rem),
+    radial-gradient(circle at 85% 10%, hsl(var(--accent-2) / 0.10), transparent 28rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans), Arial, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-heading), var(--font-sans), Arial, sans-serif;
+}
+
+.selected-work-marquee {
+  animation: selected-work-loop 76s linear infinite;
+}
+
+.selected-work-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes selected-work-loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted) / 0.55);
+}
+
+/* Premium Selection */
+::selection {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* Print Optimization for Resume */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-print-area, #resume-print-area * {
+    visibility: visible;
+  }
+  #resume-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+  }
+  #resume-print-area h1,
+  #resume-print-area h2,
+  #resume-print-area h3,
+  #resume-print-area h4,
+  #resume-print-area p,
+  #resume-print-area span,
+  #resume-print-area li {
+    color: black !important;
+  }
+}
