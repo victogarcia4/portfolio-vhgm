@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Victor Garcia M | Scholar, Educator & AI Expert",
+  title: "Dr. Victor Garcia M",
   description: "Official professional portfolio of Dr. Victor Garcia M, MSN, FNP-C, RN. Specialized in healthcare education, AI systems, clinical instruction, and digital learning platforms.",
   keywords: [
     "healthcare automation",

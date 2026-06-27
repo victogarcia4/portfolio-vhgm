@@ -30,9 +30,21 @@ export default function Home() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQwVujaYOBCccMTKCdneED74xYkNwscamenUiK9PiucQldqXtbnK9WFfPHF3h6c8dY/exec";
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formState.name && formState.email && formState.message) {
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formState),
+        });
+      } catch (_) {
+        // no-cors always throws on read, submission still goes through
+      }
       setFormSubmitted(true);
       setTimeout(() => {
         setFormSubmitted(false);
@@ -43,7 +55,8 @@ export default function Home() {
 
   const dockItems: DockItem[] = [
     { label: "Home", icon: <User size={20} />, onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
-    { label: "Works", icon: <Briefcase size={20} />, onClick: () => document.getElementById("works")?.scrollIntoView({ behavior: "smooth" }) },
+    { label: "Selected Works", icon: <Briefcase size={20} />, onClick: () => document.getElementById("works")?.scrollIntoView({ behavior: "smooth" }) },
+    { label: "Free Apps", icon: <Sparkle size={20} />, onClick: () => document.getElementById("free-apps")?.scrollIntoView({ behavior: "smooth" }) },
     { label: "Experience", icon: <GraduationCap size={20} />, onClick: () => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }) },
     { label: "Contact", icon: <EnvelopeSimple size={20} />, onClick: () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) }
   ];
@@ -87,7 +100,8 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center gap-8 text-xs uppercase font-bold tracking-wider text-zinc-400">
             <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#works" className="hover:text-white transition-colors">Works</a>
+            <a href="#works" className="hover:text-white transition-colors">Selected Works</a>
+            <a href="#free-apps" className="hover:text-white transition-colors">Free Apps</a>
             <a href="#experience" className="hover:text-white transition-colors">Experience</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
@@ -222,7 +236,7 @@ export default function Home() {
         <BentoGrid />
       </motion.section>
 
-      <motion.section {...sectionMotion} className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pb-32">
+      <motion.section {...sectionMotion} id="free-apps" className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pb-32">
         <div className="mb-10 max-w-3xl space-y-4">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">Free Access</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white">Free Miniapps</h2>
