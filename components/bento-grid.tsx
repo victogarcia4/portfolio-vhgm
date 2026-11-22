@@ -36,24 +36,42 @@ function BentoCard({
   project: FeaturedWork;
   className?: string;
 }) {
+  const isExternal = project.url.startsWith("http");
+
   return (
     <a
       href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={cn(
         "group relative flex h-[420px] w-[82vw] max-w-[520px] shrink-0 flex-col overflow-hidden rounded-lg border border-white/10 bg-[hsl(var(--surface)/0.78)] shadow-2xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 md:w-[520px]",
         className
       )}
     >
       <div className="relative h-56 overflow-hidden border-b border-white/10 bg-zinc-950">
-        <Image
-          src={project.image}
-          alt={`${project.title} project preview`}
-          fill
-          className="object-cover object-top opacity-82 transition-transform duration-700 group-hover:scale-[1.035]"
-          sizes="(max-width: 768px) 82vw, 520px"
-        />
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={`${project.title} project preview`}
+            fill
+            className="object-cover object-top opacity-82 transition-transform duration-700 group-hover:scale-[1.035]"
+            sizes="(max-width: 768px) 82vw, 520px"
+          />
+        ) : (
+          <div className="relative flex h-full w-full flex-col justify-between bg-[radial-gradient(circle_at_20%_20%,hsl(var(--accent)/0.28),transparent_55%),radial-gradient(circle_at_85%_80%,hsl(var(--accent-2)/0.20),transparent_55%),linear-gradient(135deg,#0c1118,#111827)] p-6">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[hsl(var(--accent)/0.35)] bg-[hsl(var(--accent)/0.12)] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[hsl(var(--accent))]">
+              {project.badge ?? "Lone Star College"}
+            </div>
+            <div className="space-y-1.5">
+              <p className="font-display text-2xl font-extrabold tracking-tight text-white/95 leading-tight">
+                {project.title}
+              </p>
+              <p className="truncate font-mono text-xs text-zinc-400">
+                {project.url.replace("https://", "")}
+              </p>
+            </div>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(var(--surface)/0.92)]" />
         <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-zinc-950/75 text-white backdrop-blur">
           <ArrowUpRight size={16} />

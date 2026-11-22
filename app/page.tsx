@@ -223,17 +223,15 @@ export default function Home() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">Portfolio of Work</span>
             <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white">Selected Works</h2>
             <p className="text-sm text-zinc-400 font-medium leading-relaxed">
-              Five verified project captures rotating in a continuous showcase. Each preview links to the complete apps dashboard.
+              Featured Lone Star College apps and digital projects rotating in a continuous showcase. Open any live app directly or browse the full repository below.
             </p>
           </div>
           <a
             href={selectedWorksUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-xs font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:bg-white/10 hover:text-white"
           >
             View All Apps
-            <ArrowSquareOut size={15} />
+            <ArrowRight size={15} />
           </a>
         </div>
         <BentoGrid />

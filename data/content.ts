@@ -11,7 +11,8 @@ export interface FeaturedWork {
   title: string;
   description: string;
   url: string;
-  image: string;
+  image?: string;
+  badge?: string;
   tags: string[];
 }
 
@@ -329,46 +330,86 @@ export const projects: Project[] = [
   },
 ];
 
-export const selectedWorksUrl = "https://dr-victor-garcia-apps.manus.space";
+export const selectedWorksUrl = "#lsc-apps";
 
 export const featuredWorks: FeaturedWork[] = [
+  {
+    title: "LSC A&P Game Hub",
+    description:
+      "Gamified Anatomy & Physiology learning hub built for Lone Star College students to master complex anatomical structures.",
+    url: "https://lsc-a-p-game-hub.vercel.app",
+    badge: "LSC-NH • A&P",
+    tags: ["Lone Star College", "A&P", "Vercel"],
+  },
+  {
+    title: "LSC-NH BIOL 2401 Study Guide Hub",
+    description:
+      "Centralized BIOL 2401 study guide portal uniting Exams 1–4 and Final Exam review modules for nursing-track students.",
+    url: "https://lsc-nh-biol2401-study-guide-hub.netlify.app",
+    badge: "BIOL 2401 • Exams",
+    tags: ["BIOL 2401", "Study Guide", "Netlify"],
+  },
+  {
+    title: "BIOL 2401 Lab Dashboard",
+    description:
+      "Interactive laboratory dashboard designed for A&P I station preparation, anatomical models, and practical readiness.",
+    url: "https://2401-lab-dashboard.vercel.app",
+    badge: "BIOL 2401 • Lab",
+    tags: ["BIOL 2401", "Lab Prep", "Vercel"],
+  },
+  {
+    title: "LSC-NH Lab Practical 4 Neuro Atlas",
+    description:
+      "Visual neuroanatomy atlas covering brain, spinal cord, cranial nerves, eye, ear, and sheep brain lab practicals.",
+    url: "https://lsc-nh-lab-practical-4-neuro-atlas.netlify.app",
+    badge: "Lab Practical 4",
+    tags: ["Neuro Atlas", "BIOL 2401", "Netlify"],
+  },
+  {
+    title: "A&P I Fall 2026 NotebookLM & AI Games",
+    description:
+      "AI-assisted NotebookLM study workflows and interactive review games tailored for Fall 2026 A&P I sections.",
+    url: "https://ap1-fall2026-notebook-lm-and-ai-games.vercel.app",
+    badge: "Fall 2026 • AI",
+    tags: ["A&P I", "NotebookLM", "Vercel"],
+  },
+  {
+    title: "LSC-NH Maternity N1 Video Hub",
+    description:
+      "Maternal-newborn nursing video hub and remediation companion built for Lone Star College–North Harris N1 cohorts.",
+    url: "https://lsc-nh-n1-mnr-videohub.netlify.app",
+    badge: "Nursing N1",
+    tags: ["Nursing N1", "Maternity", "Netlify"],
+  },
+  {
+    title: "AI LSC-NH Task Force Proposal",
+    description:
+      "Strategic AI adoption, instructional ethics, and faculty enablement framework for Lone Star College–North Harris.",
+    url: "https://ai-lsc-nh-task-force-proposal.netlify.app",
+    badge: "LSC-NH • AI",
+    tags: ["LSC-NH", "AI Strategy", "Netlify"],
+  },
   {
     title: "Saile Montilla Fitness",
     description:
       "Personal trainer web experience with service navigation, visual transformation storytelling, and booking-oriented presentation.",
-    url: selectedWorksUrl,
+    url: "https://saile-fit-hub.vercel.app",
     image: "/project-previews/saile-montilla.png",
-    tags: ["Fitness", "Landing Page", "Responsive UI"],
-  },
-  {
-    title: "BrightTone AI",
-    description:
-      "Audience-aware AI messaging assistant for D2L communication workflows and education-ready tone adaptation.",
-    url: selectedWorksUrl,
-    image: "/project-previews/brighttone-ia.png",
-    tags: ["AI Messaging", "Education", "Lovable"],
-  },
-  {
-    title: "Konfetti Event Hub",
-    description:
-      "Live social photo hub for events, designed around real-time participation, guest sharing, and celebration media.",
-    url: selectedWorksUrl,
-    image: "/project-previews/konfetti-event-hub.png",
-    tags: ["Events", "Social Photos", "Lovable"],
+    tags: ["Fitness", "Landing Page", "Vercel"],
   },
   {
     title: "DoseGennie",
     description:
       "Medication-oriented landing experience with a clean product narrative and health workflow positioning.",
-    url: selectedWorksUrl,
+    url: "https://dosegennie.vercel.app",
     image: "/project-previews/dose-gennie.png",
-    tags: ["Health Tech", "Landing Page", "Base44"],
+    tags: ["Health Tech", "Landing Page", "Vercel"],
   },
   {
     title: "Kairosy",
     description:
       "Daily planning miniapp focused on time clarity, task rhythm, and accessible personal productivity.",
-    url: selectedWorksUrl,
+    url: "https://kairosy.netlify.app",
     image: "/project-previews/kairosy.png",
     tags: ["Planning", "Miniapp", "Netlify"],
   },
@@ -376,15 +417,15 @@ export const featuredWorks: FeaturedWork[] = [
     title: "NotebookLM Workshop Content",
     description:
       "Learning content experience for a NotebookLM workshop, moving class materials into structured AI-assisted study workflows.",
-    url: selectedWorksUrl,
+    url: "https://notebooklm-workshop-class.netlify.app",
     image: "/project-previews/notebooklm-content.png",
-    tags: ["NotebookLM", "Workshop", "Lovable"],
+    tags: ["NotebookLM", "Workshop", "Netlify"],
   },
   {
     title: "Vitruvian EduHub",
     description:
       "Free Anatomy & Physiology tutoring hub with student-centered explanations, study support, and guided learning access.",
-    url: selectedWorksUrl,
+    url: "https://vitruvianeduhub.netlify.app",
     image: "/project-previews/vitruvian-eduhub.png",
     tags: ["A&P", "Tutoring", "Netlify"],
   },
@@ -392,7 +433,7 @@ export const featuredWorks: FeaturedWork[] = [
     title: "Gaby Neuropedia",
     description:
       "Professional neurology and health consulting portfolio for Dra. Maria Gabriela Jimenez.",
-    url: selectedWorksUrl,
+    url: "https://gabyneuropedia-portfolio.vercel.app",
     image: "/project-previews/gaby-neuropedia.png",
     tags: ["Healthcare", "Portfolio", "Vercel"],
   },
@@ -400,7 +441,7 @@ export const featuredWorks: FeaturedWork[] = [
     title: "Van's Bakery TX",
     description:
       "Premium bakery and academy website with catalog navigation, custom cake positioning, and artisan brand presentation.",
-    url: selectedWorksUrl,
+    url: "https://vansbakerytx-web.netlify.app",
     image: "/project-previews/vans-bakery.png",
     tags: ["Bakery", "Catalog", "Netlify"],
   },
@@ -408,7 +449,7 @@ export const featuredWorks: FeaturedWork[] = [
     title: "Victor Garcia Portfolio",
     description:
       "Entertainment writing and film expertise portfolio with editorial positioning and a polished professional presence.",
-    url: selectedWorksUrl,
+    url: "https://victor-garcia-portfolio.vercel.app",
     image: "/project-previews/victor-garcia-portfolio.png",
     tags: ["Portfolio", "Writing", "Vercel"],
   },
@@ -416,7 +457,7 @@ export const featuredWorks: FeaturedWork[] = [
     title: "Vitruvius Duo",
     description:
       "Gamified generative AI micro-learning app designed for fast bilingual concept practice and learner engagement.",
-    url: selectedWorksUrl,
+    url: "https://vitruvius-duo.vercel.app",
     image: "/project-previews/vitruvius-duo.png",
     tags: ["AI Learning", "Gamified", "Vercel"],
   },
