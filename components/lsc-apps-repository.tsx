@@ -21,6 +21,7 @@ export function LscAppsRepository() {
     return {
       Netlify: lscApps.filter((a) => a.platform === "Netlify").length,
       Vercel: lscApps.filter((a) => a.platform === "Vercel").length,
+      Lovable: lscApps.filter((a) => a.platform === "Lovable").length,
     };
   }, []);
 
@@ -68,14 +69,16 @@ export function LscAppsRepository() {
             <FunnelSimple size={13} />
             Host:
           </span>
-          {(["All", "Netlify", "Vercel"] as const).map((platform) => {
+          {(["All", "Netlify", "Vercel", "Lovable"] as const).map((platform) => {
             const active = selectedPlatform === platform;
             const count =
               platform === "All"
                 ? lscApps.length
                 : platform === "Netlify"
                   ? platformCounts.Netlify
-                  : platformCounts.Vercel;
+                  : platform === "Vercel"
+                    ? platformCounts.Vercel
+                    : platformCounts.Lovable;
             return (
               <button
                 key={platform}
@@ -121,7 +124,7 @@ export function LscAppsRepository() {
           <Globe size={14} className="text-[hsl(var(--accent))]" />
           Showing <strong className="text-white">{visibleApps.length}</strong> of{" "}
           <strong className="text-white">{filteredApps.length}</strong> matching live apps (
-          {lscApps.length} total across Netlify &amp; Vercel)
+          {lscApps.length} total across Netlify, Vercel &amp; Lovable)
         </span>
         {isFiltered && (
           <button
@@ -162,7 +165,9 @@ export function LscAppsRepository() {
                     className={`rounded-md border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
                       app.platform === "Netlify"
                         ? "border-teal-400/25 bg-teal-400/10 text-teal-300"
-                        : "border-zinc-400/25 bg-white/10 text-zinc-200"
+                        : app.platform === "Lovable"
+                          ? "border-rose-400/25 bg-rose-400/10 text-rose-300"
+                          : "border-zinc-400/25 bg-white/10 text-zinc-200"
                     }`}
                   >
                     {app.platform}

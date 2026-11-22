@@ -1,4 +1,4 @@
-export type LscAppPlatform = "Netlify" | "Vercel";
+export type LscAppPlatform = "Netlify" | "Vercel" | "Lovable";
 
 export type LscAppCategory =
   | "BIOL 2401 (A&P I)"
@@ -26,6 +26,69 @@ export const lscAppCategories: LscAppCategory[] = [
 ];
 
 export const lscApps: LscApp[] = [
+  {
+    slug: "48hours-live",
+    title: "48hours.live",
+    url: "https://48hours-live.vercel.app/",
+    platform: "Vercel",
+    category: "LSC-NH & AI Initiatives",
+  },
+  {
+    slug: "vitruvian-question-bank",
+    title: "AP Question Bank (Exam Simulator)",
+    url: "https://vitruvian-question-bank.lovable.app",
+    platform: "Lovable",
+    category: "BIOL 2401 (A&P I)",
+  },
+  {
+    slug: "apimages-archive",
+    title: "APImages (A&P Atlas)",
+    url: "https://apimages-archive.lovable.app",
+    platform: "Lovable",
+    category: "BIOL 2401 (A&P I)",
+  },
+  {
+    slug: "notebooklm-workshop-content",
+    title: "NotebookLM Workshop Content",
+    url: "https://notebooklm-workshop-content.lovable.app",
+    platform: "Lovable",
+    category: "LSC-NH & AI Initiatives",
+  },
+  {
+    slug: "brighttone-ia",
+    title: "BrighTone AI (D2L Text Enhancer)",
+    url: "https://brighttone-ia.lovable.app",
+    platform: "Lovable",
+    category: "LSC-NH & AI Initiatives",
+  },
+  {
+    slug: "d2l-quiz-uploader",
+    title: "D2L Quiz Builder / Uploader",
+    url: "https://d2l-quiz-uploader.lovable.app",
+    platform: "Lovable",
+    category: "Lab Practicals & Exams",
+  },
+  {
+    slug: "ngn-question-builder",
+    title: "New Gen NCLEX Question Generator",
+    url: "https://ngn-question-builder.lovable.app/",
+    platform: "Lovable",
+    category: "Nursing (N1 / N3)",
+  },
+  {
+    slug: "maternal-newborn-ngn-gen",
+    title: "New Gen NCLEX Maternal/Newborn Generator",
+    url: "https://maternal-newborn-ngn-gen.lovable.app",
+    platform: "Lovable",
+    category: "Nursing (N1 / N3)",
+  },
+  {
+    slug: "maternity-ngn-case-buddy",
+    title: "NGN Maternal/Newborn Case Repository",
+    url: "https://maternity-ngn-case-buddy.lovable.app",
+    platform: "Lovable",
+    category: "Nursing (N1 / N3)",
+  },
   {
     slug: "2401-fa26-1101-tracker",
     title: "2401 FA26 1101 Tracker",

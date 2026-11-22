@@ -338,7 +338,7 @@ export const featuredWorks: FeaturedWork[] = [
     description:
       "Gamified Anatomy & Physiology learning hub built for Lone Star College students to master complex anatomical structures.",
     url: "https://lsc-a-p-game-hub.vercel.app",
-    badge: "LSC-NH • A&P",
+    image: "/project-previews/lsc-a-p-game-hub.png",
     tags: ["Lone Star College", "A&P", "Vercel"],
   },
   {
@@ -346,7 +346,7 @@ export const featuredWorks: FeaturedWork[] = [
     description:
       "Centralized BIOL 2401 study guide portal uniting Exams 1–4 and Final Exam review modules for nursing-track students.",
     url: "https://lsc-nh-biol2401-study-guide-hub.netlify.app",
-    badge: "BIOL 2401 • Exams",
+    image: "/project-previews/lsc-nh-biol2401-study-guide-hub.png",
     tags: ["BIOL 2401", "Study Guide", "Netlify"],
   },
   {
@@ -354,7 +354,7 @@ export const featuredWorks: FeaturedWork[] = [
     description:
       "Interactive laboratory dashboard designed for A&P I station preparation, anatomical models, and practical readiness.",
     url: "https://2401-lab-dashboard.vercel.app",
-    badge: "BIOL 2401 • Lab",
+    image: "/project-previews/2401-lab-dashboard.png",
     tags: ["BIOL 2401", "Lab Prep", "Vercel"],
   },
   {
@@ -362,32 +362,40 @@ export const featuredWorks: FeaturedWork[] = [
     description:
       "Visual neuroanatomy atlas covering brain, spinal cord, cranial nerves, eye, ear, and sheep brain lab practicals.",
     url: "https://lsc-nh-lab-practical-4-neuro-atlas.netlify.app",
-    badge: "Lab Practical 4",
+    image: "/project-previews/lsc-nh-lab-practical-4-neuro-atlas.png",
     tags: ["Neuro Atlas", "BIOL 2401", "Netlify"],
-  },
-  {
-    title: "A&P I Fall 2026 NotebookLM & AI Games",
-    description:
-      "AI-assisted NotebookLM study workflows and interactive review games tailored for Fall 2026 A&P I sections.",
-    url: "https://ap1-fall2026-notebook-lm-and-ai-games.vercel.app",
-    badge: "Fall 2026 • AI",
-    tags: ["A&P I", "NotebookLM", "Vercel"],
   },
   {
     title: "LSC-NH Maternity N1 Video Hub",
     description:
       "Maternal-newborn nursing video hub and remediation companion built for Lone Star College–North Harris N1 cohorts.",
     url: "https://lsc-nh-n1-mnr-videohub.netlify.app",
-    badge: "Nursing N1",
+    image: "/project-previews/lsc-nh-n1-mnr-videohub.png",
     tags: ["Nursing N1", "Maternity", "Netlify"],
   },
   {
-    title: "AI LSC-NH Task Force Proposal",
+    title: "BIOL 1408 Review Hub",
     description:
-      "Strategic AI adoption, instructional ethics, and faculty enablement framework for Lone Star College–North Harris.",
-    url: "https://ai-lsc-nh-task-force-proposal.netlify.app",
-    badge: "LSC-NH • AI",
-    tags: ["LSC-NH", "AI Strategy", "Netlify"],
+      "Interactive biology review dashboard for non-science majors with exam modules, topic filtering, and rationales.",
+    url: "https://biol1408-review.netlify.app",
+    image: "/project-previews/biol1408-review.png",
+    tags: ["BIOL 1408", "Exam Review", "Netlify"],
+  },
+  {
+    title: "BrighTone AI",
+    description:
+      "Audience-aware AI messaging assistant for D2L communication workflows and education-ready tone adaptation.",
+    url: "https://brighttone-ia.lovable.app",
+    image: "/project-previews/brighttone-ia.png",
+    tags: ["D2L", "AI Messaging", "Lovable"],
+  },
+  {
+    title: "NotebookLM Workshop Content",
+    description:
+      "Learning content experience for a NotebookLM workshop, moving class materials into structured AI-assisted study workflows.",
+    url: "https://notebooklm-workshop-content.lovable.app",
+    image: "/project-previews/notebooklm-content.png",
+    tags: ["NotebookLM", "Workshop", "Lovable"],
   },
   {
     title: "Saile Montilla Fitness",
@@ -412,14 +420,6 @@ export const featuredWorks: FeaturedWork[] = [
     url: "https://kairosy.netlify.app",
     image: "/project-previews/kairosy.png",
     tags: ["Planning", "Miniapp", "Netlify"],
-  },
-  {
-    title: "NotebookLM Workshop Content",
-    description:
-      "Learning content experience for a NotebookLM workshop, moving class materials into structured AI-assisted study workflows.",
-    url: "https://notebooklm-workshop-class.netlify.app",
-    image: "/project-previews/notebooklm-content.png",
-    tags: ["NotebookLM", "Workshop", "Netlify"],
   },
   {
     title: "Vitruvian EduHub",
