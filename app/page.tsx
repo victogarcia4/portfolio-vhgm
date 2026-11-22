@@ -151,7 +151,7 @@ export default function Home() {
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-8 text-left">
-            {["30+ Years", "22 Publications", "3 Core Courses", "EN / ES"].map((stat) => (
+            {["30+ Years", "22 Publications", "5 Core Courses", "EN / ES"].map((stat) => (
               <div key={stat} className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                 <span className="block text-lg font-display font-bold text-white">{stat}</span>
                 <span className="text-[10px] uppercase tracking-wider text-zinc-500">Credential Signal</span>

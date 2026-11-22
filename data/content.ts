@@ -55,7 +55,7 @@ export const biography = {
   address: "Conroe, TX 77384",
   languages: ["English", "Spanish"],
   profileImage: "/VHGM  foto.jpg",
-  fullBio: `International Medical Graduate, licensed Family Nurse Practitioner (FNP-C, RN), digital curator, and AI expert with 30+ years of combined clinical, academic, and technology experience. Currently serving as Biology Faculty at Lone Star College-North Harris while also leading AI-native ventures through 48hours.live and Edunexia. Expertise spans general medicine, OB/GYN, pediatric and adolescent gynecology, perioperative nursing, educational technology, and high-velocity AI product delivery.
+  fullBio: `International Medical Graduate, licensed Family Nurse Practitioner (FNP-C, RN), digital curator, and AI expert with 30+ years of combined clinical, academic, and technology experience. Currently serving as Biology & Nursing Faculty (BIOL 2401, BIOL 2402, BIOL 1408, NURS 1523, and NURS 2514) at Lone Star College-North Harris while also leading AI-native ventures through 48hours.live and Edunexia. Expertise spans general medicine, OB/GYN, pediatric and adolescent gynecology, perioperative nursing, educational technology, and high-velocity AI product delivery.
 
 Pedagogy is grounded in Clinical Spotlighting - linking anatomical and physiological concepts to real clinical scenarios - combined with virtual anatomy platforms, LMS tools, formative assessment loops, and bilingual student support. The result is a clinician-educator portfolio built around practical reasoning, instructional clarity, and modern learning systems.`,
   teachingPhilosophy:
@@ -63,7 +63,7 @@ Pedagogy is grounded in Clinical Spotlighting - linking anatomical and physiolog
   achievements: [
     "30+ years of combined clinical, academic, and instructional technology experience.",
     "22 peer-reviewed publications across medical and health science topics.",
-    "BIOL 2401, BIOL 2402, and BIOL 1408 instruction for nursing-track and allied health students.",
+    "BIOL 2401, BIOL 2402, BIOL 1408, NURS 1523, and NURS 2514 (Nursing) instruction for nursing-track and allied health students.",
     "CEO of 48hours.live and Edunexia, building rapid AI-powered web systems.",
     "Digital curator and AI expert practice launched in January 2026.",
     "Bilingual English/Spanish support for diverse and first-generation student populations.",
@@ -146,7 +146,7 @@ export const experiences: Experience[] = [
     location: "Houston, Texas",
     period: "08/2023 - Present",
     highlights: [
-      "Deliver BIOL 2401, BIOL 2402, and BIOL 1408 to 90+ nursing-track and pre-health students per semester; maintain strong course completion across consecutive semesters.",
+      "Deliver BIOL 2401, BIOL 2402, BIOL 1408, NURS 1523, and NURS 2514 (Nursing) to 90+ nursing-track and pre-health students per semester; maintain strong course completion across consecutive semesters.",
       "Implement Clinical Spotlighting methodology by bridging anatomical and physiological concepts to bedside clinical scenarios.",
       "Integrate Visible Body and Anatomage Table virtual labs for remote and hybrid sections; authored interactive modules via SoftChalk Cloud.",
       "Active participant in Faculty Mentoring Program (Spring 2026); developed a Safe-to-Guess verbal engagement strategy adopted departmentally.",
