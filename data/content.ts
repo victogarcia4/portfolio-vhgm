@@ -382,6 +382,46 @@ export const featuredWorks: FeaturedWork[] = [
     tags: ["BIOL 1408", "Exam Review", "Netlify"],
   },
   {
+    title: "A&P Exam Builder (Question Bank)",
+    description:
+      "Human Anatomy & Physiology Chapters 1–24 exam simulator with Bloom's taxonomy filtering, Study Mode, and timed Exam Mode.",
+    url: "https://vitruvian-question-bank.lovable.app",
+    image: "/project-previews/vitruvian-question-bank.png",
+    tags: ["A&P", "Exam Simulator", "Lovable"],
+  },
+  {
+    title: "NGN Clinical Judgment Case Bank",
+    description:
+      "Next Generation NCLEX maternal-newborn case repository featuring 219+ RNSG 1523/2514 cases with Study Mode and audio narration.",
+    url: "https://maternity-ngn-case-buddy.lovable.app",
+    image: "/project-previews/maternity-ngn-case-buddy.png",
+    tags: ["NGN NCLEX", "Maternity", "Lovable"],
+  },
+  {
+    title: "D2L Quiz Builder & Uploader",
+    description:
+      "Brightspace question library tool converting documents and spreadsheets into validated D2L CSV import files.",
+    url: "https://d2l-quiz-uploader.lovable.app",
+    image: "/project-previews/d2l-quiz-uploader.png",
+    tags: ["D2L Brightspace", "Quiz Builder", "Lovable"],
+  },
+  {
+    title: "APImages (A&P Atlas & Classifier)",
+    description:
+      "AI-powered anatomy model image archive and classifier organizing 400+ lab visual assets by body system.",
+    url: "https://apimages-archive.lovable.app",
+    image: "/project-previews/apimages-archive.png",
+    tags: ["A&P Atlas", "AI Classifier", "Lovable"],
+  },
+  {
+    title: "Maternal / Newborn NGN Generator",
+    description:
+      "Next Generation NCLEX case study generator for RNSG 1523 and RNSG 2514 nursing cohorts with answer keys and rationales.",
+    url: "https://maternal-newborn-ngn-gen.lovable.app",
+    image: "/project-previews/maternal-newborn-ngn-gen.png",
+    tags: ["NGN NCLEX", "RNSG 1523/2514", "Lovable"],
+  },
+  {
     title: "BrighTone AI",
     description:
       "Audience-aware AI messaging assistant for D2L communication workflows and education-ready tone adaptation.",
