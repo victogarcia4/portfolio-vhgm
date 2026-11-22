@@ -21,6 +21,7 @@ import { Particles } from "@/components/magicui/particles";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import { BentoGrid } from "@/components/bento-grid";
+import { LscAppsRepository } from "@/components/lsc-apps-repository";
 import { Timeline } from "@/components/timeline";
 import { ResumeModal } from "@/components/resume-modal";
 import { Dock, DockItem } from "@/components/magicui/dock";
@@ -57,6 +58,7 @@ export default function Home() {
     { label: "Home", icon: <User size={20} />, onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
     { label: "Selected Works", icon: <Briefcase size={20} />, onClick: () => document.getElementById("works")?.scrollIntoView({ behavior: "smooth" }) },
     { label: "Free Apps", icon: <Sparkle size={20} />, onClick: () => document.getElementById("free-apps")?.scrollIntoView({ behavior: "smooth" }) },
+    { label: "LSC Apps", icon: <BookOpen size={20} />, onClick: () => document.getElementById("lsc-apps")?.scrollIntoView({ behavior: "smooth" }) },
     { label: "Experience", icon: <GraduationCap size={20} />, onClick: () => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }) },
     { label: "Contact", icon: <EnvelopeSimple size={20} />, onClick: () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) }
   ];
@@ -102,6 +104,7 @@ export default function Home() {
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#works" className="hover:text-white transition-colors">Selected Works</a>
             <a href="#free-apps" className="hover:text-white transition-colors">Free Apps</a>
+            <a href="#lsc-apps" className="hover:text-white transition-colors">LSC Apps</a>
             <a href="#experience" className="hover:text-white transition-colors">Experience</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
@@ -264,6 +267,18 @@ export default function Home() {
             </a>
           ))}
         </div>
+      </motion.section>
+
+      {/* Lone Star College Live Apps Repository */}
+      <motion.section {...sectionMotion} id="lsc-apps" className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pb-32 pt-8 border-t border-white/10">
+        <div className="mb-10 max-w-3xl space-y-4 pt-16">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">Lone Star College Live Repository</span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white">Lone Star College Apps</h2>
+          <p className="text-sm text-zinc-400 font-medium leading-relaxed">
+            Complete directory of live study guides, lab practical atlases, progress trackers, exam prep tools, and AI initiatives built for Lone Star College across Netlify and Vercel.
+          </p>
+        </div>
+        <LscAppsRepository />
       </motion.section>
 
       {/* Tech Stack Marquee Section */}
