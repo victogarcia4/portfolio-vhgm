@@ -195,6 +195,13 @@ export const lscApps: LscApp[] = [
     category: "BIOL 2401 (A&P I)",
   },
   {
+    slug: "biol-2401-ch-12-senses",
+    title: "BIOL 2401 Chapter 12 General and Special Senses",
+    url: "https://biol-2401-ch-12-senses.netlify.app/",
+    platform: "Netlify",
+    category: "BIOL 2401 (A&P I)",
+  },
+  {
     slug: "biol2401-flipped-classroom",
     title: "BIOL 2401 Flipped Classroom",
     url: "https://biol2401-flipped-classroom.netlify.app",
